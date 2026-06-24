@@ -1,0 +1,24 @@
+# --- Dependencies ---
+node_modules/
+__pycache__/
+.venv/
+venv/
+
+# --- Build output ---
+dist/
+
+# --- Generated card data (regenerate with the scripts; see README) ---
+# The downloader writes the API snapshot + ~3 GB of images here; the splitter
+# derives index.json + chunks/. Source of truth is the scripts, not git.
+/public/
+/scripts/download_failures.txt
+
+# --- Logs ---
+*.log
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
