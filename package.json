@@ -1,5 +1,5 @@
 {
-  "name": "@omphalos/cards",
+  "name": "@omphalos-sorcery-tcg/cards",
   "version": "0.1.0",
   "description": "Canonical card data, domain types, deck validation, and a data-loading client for Sorcery: Contested Realm (Omphalos).",
   "license": "UNLICENSED",

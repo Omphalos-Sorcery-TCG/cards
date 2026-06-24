@@ -1,4 +1,4 @@
-# @omphalos/cards
+# @omphalos-sorcery-tcg/cards
 
 Canonical card data for **Sorcery: Contested Realm**, shared across the Omphalos
 projects (the web app today; a game server / rules engine later).
@@ -48,14 +48,14 @@ the current working directory), so a consumer can generate the artifact straight
 into its own served directory:
 
 ```bash
-node node_modules/@omphalos/cards/scripts/split-cards.mjs public
-python node_modules/@omphalos/cards/scripts/download_cards.py public
+node node_modules/@omphalos-sorcery-tcg/cards/scripts/split-cards.mjs public
+python node_modules/@omphalos-sorcery-tcg/cards/scripts/download_cards.py public
 ```
 
 ## Consuming it
 
 ```ts
-import { createCardClient, validateDeck, type CardSummary } from "@omphalos/cards";
+import { createCardClient, validateDeck, type CardSummary } from "@omphalos-sorcery-tcg/cards";
 
 const cards = createCardClient({ baseUrl: "" }); // "" = same origin
 const index = await cards.loadIndex();
@@ -76,5 +76,5 @@ source. Before publishing to a registry for JS consumers:
 3. Consider `moduleResolution: NodeNext` with explicit file extensions for
    broad compatibility.
 
-Then consumers can depend on a versioned `@omphalos/cards` instead of a local
+Then consumers can depend on a versioned `@omphalos-sorcery-tcg/cards` instead of a local
 source alias, and the data artifact can ship as a CDN-hosted release asset.
